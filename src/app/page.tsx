@@ -80,10 +80,15 @@ export default function Home() {
                       </h3>
 
                       {/* Footer */}
+                      {/* Footer */}
                       <div className="flex items-center gap-5 text-xs text-[#57534E] font-medium pt-3 border-t border-[#F2F0EB] mt-1">
                         <div className="flex items-center gap-1.5">
                           <Timer className="w-3.5 h-3.5" />
                           <span>10 Weeks</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <MapPin className="w-3.5 h-3.5" />
+                          <span>Remote</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                           <span className="text-[#1F3A4D] font-bold bg-[#F2F0EB] px-2 py-0.5 rounded">900€</span>
@@ -140,7 +145,7 @@ export default function Home() {
           {/* Mirroring container - using absolute inset to force fill */}
           <div className="absolute inset-0">
             <Image
-              src="/images/hero-new.jpg"
+              src="/images/hero-bw.jpg"
               alt="Pascal with lighter"
               fill
               className="object-cover object-center"
