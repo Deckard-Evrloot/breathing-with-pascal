@@ -46,7 +46,7 @@ export default function Home() {
               </h1>
 
               <h2 className="text-xl font-serif text-[#57534E] font-light leading-relaxed max-w-sm">
-                Analog presence for a digital age.
+                Master your output in an age of constant input.
               </h2>
             </div>
 
