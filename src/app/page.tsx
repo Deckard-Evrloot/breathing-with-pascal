@@ -144,7 +144,7 @@ export default function Home() {
           {/* Mirroring container - using absolute inset to force fill */}
           <div className="absolute inset-0">
             <Image
-              src="/images/hero-transparent.png"
+              src="/images/hero-final.jpg"
               alt="Pascal with lighter"
               fill
               className="object-cover object-center"
