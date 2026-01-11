@@ -138,9 +138,9 @@ export default function Home() {
         <div className="flex-1 relative h-[50vh] md:h-auto order-1 md:order-2 mix-blend-normal">
 
           {/* Mirroring container - using absolute inset to force fill */}
-          <div className="absolute inset-0 scale-x-[-1]">
+          <div className="absolute inset-0">
             <Image
-              src="/images/hero-pascal.jpg"
+              src="/images/hero-new.jpg"
               alt="Pascal with lighter"
               fill
               className="object-cover object-center"
