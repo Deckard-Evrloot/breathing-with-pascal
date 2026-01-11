@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calendar, MapPin, Instagram, Mail, Lock, BrainCircuit, Timer, Euro, Gem, Sparkles } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Instagram, Mail, Lock, BrainCircuit, Timer, Euro, Gem, Sparkles, Star } from "lucide-react";
 import { Inter, Lora } from "next/font/google";
 
 // Scoped Fonts
@@ -16,10 +16,17 @@ const lora = Lora({
   style: ["normal", "italic"],
 });
 
+import { Parisienne } from "next/font/google";
+const parisienne = Parisienne({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-parisienne",
+});
+
 export default function Home() {
   return (
     // Scoped Styles Wrapper
-    <main className={`${inter.variable} ${lora.variable} min-h-screen bg-[#F8F7F4] text-[#222222] font-sans selection:bg-[#1F3A4D] selection:text-white overflow-x-hidden`}>
+    <main className={`${inter.variable} ${lora.variable} ${parisienne.variable} min-h-screen bg-[#F8F7F4] text-[#222222] font-sans selection:bg-[#1F3A4D] selection:text-white overflow-x-hidden`}>
 
       {/* --- TOP NAV --- */}
       <nav className="absolute top-0 right-0 p-8 z-50">
@@ -42,10 +49,10 @@ export default function Home() {
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[0.9]">
                 Reclaim your <br />
-                <span className="italic font-serif text-[#78716C]">attention.</span>
+                executive <span className="italic font-serif text-[#78716C]">attention.</span>
               </h1>
 
-              <h2 className="text-xl font-serif text-[#57534E] font-light leading-relaxed max-w-sm">
+              <h2 className="text-xl font-serif text-[#57534E] font-light leading-relaxed max-w-2xl">
                 Master your output in an age of constant input.
               </h2>
             </div>
@@ -168,7 +175,7 @@ export default function Home() {
           <div className="text-center space-y-6">
             <span className="text-xs font-bold tracking-[0.2em] text-[#EDA76B] uppercase">The Philosophy</span>
             <h3 className="text-4xl md:text-5xl font-serif text-[#222222]">
-              We use conscious breathing to manually override the stress response.
+              I use conscious breathing to manually override the stress response.
             </h3>
           </div>
 
@@ -220,18 +227,50 @@ export default function Home() {
           </div>
 
           {/* Right: Text */}
-          <div className="space-y-8 max-w-lg">
+          <div className="space-y-6 max-w-lg">
             <span className="text-sm font-bold tracking-widest text-[#1F3A4D] uppercase">About Your Guide</span>
-            <h2 className="text-4xl md:text-5xl font-serif leading-tight">
-              More than just <br /> breathing.
+
+            <h2 className="text-4xl md:text-5xl font-serif leading-tight text-[#222222]">
+              <strong className="font-bold">Hey, I am <span className={`${parisienne.className} font-normal text-5xl md:text-6xl ml-1`}>Pascal.</span></strong>
             </h2>
+
             <div className="w-12 h-0.5 bg-[#EDA76B]" />
-            <p className="text-lg text-[#57534E] font-serif leading-loose">
-              As your coach, Pascal doesn't just teach techniques. He holds the space necessary for you to safely navigate the transition from chaos to clarity.
-            </p>
-            <p className="text-lg text-[#57534E] font-serif leading-loose">
-              This is deep, restorative work for a distracted age.
-            </p>
+
+            <div className="space-y-4 text-base md:text-lg text-[#57534E] font-serif leading-loose">
+              <p>
+                My background combines the discipline of the German Army with a Master’s in Sports Science and deep study of somatics. This unique combination led me to focus on breathwork as the most efficient tool for self-regulation.
+              </p>
+              <p>
+                Today, I work with leaders to navigate their most demanding phases. My role is to provide the framework you need to stop reacting to external chaos and regain control of your internal state.
+              </p>
+            </div>
+
+            {/* Testimonial */}
+            <div className="pt-6 border-t border-[#E7E5E4] mt-4">
+              <div className="flex gap-0.5 text-[#EDA76B] mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+              <p className="text-sm md:text-base text-[#57534E] italic mb-4 leading-relaxed">
+                “Pascal helped me understand my emotions in stressful situations and decouple it from my immediate reactions.”
+              </p>
+
+              <div className="flex items-center gap-3">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#E7E5E4]">
+                  <Image
+                    src="/images/tobi-amann.jpg"
+                    alt="Tobi Amann"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="text-xs font-bold text-[#1F3A4D] uppercase tracking-wider">
+                  Tobias Amann — CEO TIKI GmbH
+                </div>
+              </div>
+            </div>
+
             {/* Mobile only image */}
             <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl grayscale md:hidden mt-8">
               <Image
@@ -253,7 +292,7 @@ export default function Home() {
 
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-light">The Next Immersion</h2>
-            <p className="text-[#A8A29E] font-serif italic text-lg">Join us in the physical world.</p>
+            <p className="text-[#A8A29E] font-serif italic text-lg">Join me in the physical world.</p>
           </div>
 
           {/* Singleton Card */}
