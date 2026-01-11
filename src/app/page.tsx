@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calendar, MapPin, Instagram, Mail, Lock, BrainCircuit, Timer, Euro, Gem } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Instagram, Mail, Lock, BrainCircuit, Timer, Euro, Gem, Sparkles } from "lucide-react";
 import { Inter, Lora } from "next/font/google";
 
 // Scoped Fonts
@@ -53,87 +53,82 @@ export default function Home() {
             {/* Action Cards Area */}
             <div className="flex flex-col gap-6 pt-4">
 
-              {/* 1. Upcoming Retreat Card */}
-              <Link href="#events" className="group block max-w-md relative">
-                <div className="flex items-center gap-5 p-3 pr-6 rounded-2xl bg-white border border-[#E7E5E4] hover:border-[#EDA76B]/50 hover:shadow-md transition-all duration-300">
-                  {/* Thumbnail */}
-                  <div className="relative w-24 h-24 shrink-0 rounded-xl overflow-hidden bg-stone-200">
-                    <Image
-                      src="/images/event-egypt.jpg"
-                      alt="Egypt"
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-
-                  {/* Text */}
-                  <div className="flex-1 min-w-0 space-y-1">
-                    <span className="text-[10px] font-bold tracking-widest text-[#EDA76B] uppercase block">Upcoming Retreat</span>
-                    <h3 className="text-lg font-serif font-medium text-[#222222] leading-tight">Egypt Immersion</h3>
-
-                    {/* Meta Info */}
-                    <div className="flex items-center gap-4 text-xs text-[#78716C] pt-1 font-medium">
-                      <div className="flex items-center gap-1.5">
-                        <Timer className="w-3.5 h-3.5" />
-                        <span>1 Week</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <span>1200€</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Arrow */}
-                  <div className="w-8 h-8 rounded-full bg-[#F8F7F4] flex items-center justify-center text-[#222222] group-hover:bg-[#1F3A4D] group-hover:text-white transition-colors">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </Link>
-
-              {/* 2. Coaching Card */}
+              {/* 1. Manager Program (PRIMARY HERO) */}
               <div className="max-w-md space-y-3">
-                <p className="text-sm font-serif text-[#78716C] italic pl-2">
-                  "You cannot think your way out of chronic stress."
-                </p>
 
                 <Link href="mailto:hello@pascal.com?subject=Manager%20Program" className="group block relative">
-                  {/* Badge */}
-                  <div className="absolute -top-3 -right-2 bg-[#1F3A4D] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-sm z-10 transform rotate-2">
-                    NEW 2026: Manager Program
-                  </div>
+                  <div className="flex flex-col p-6 rounded-3xl border border-[#E7E5E4] bg-white shadow-lg hover:shadow-xl hover:border-[#1F3A4D]/20 transition-all duration-300 relative overflow-hidden">
 
-                  <div className="flex items-center gap-5 p-4 rounded-2xl border border-[#E7E5E4] bg-[#F2F0EB]/50 hover:bg-[#F2F0EB] transition-colors relative overflow-hidden">
-
-                    {/* Line Art Icon */}
-                    <div className="w-12 h-12 rounded-full bg-[#E7E5E4]/50 flex items-center justify-center shrink-0">
-                      <BrainCircuit className="w-6 h-6 text-[#57534E]" strokeWidth={1.5} />
+                    {/* Integrated Header */}
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 rounded-full bg-[#F2F0EB] flex items-center justify-center shrink-0">
+                          <BrainCircuit className="w-4 h-4 text-[#1F3A4D]" strokeWidth={1.5} />
+                        </div>
+                        <span className="text-[10px] font-bold tracking-widest text-[#1F3A4D] uppercase">New 2026: Manager Program</span>
+                      </div>
+                      {/* <Sparkles className="w-4 h-4 text-[#EDA76B]" /> */}
                     </div>
 
-                    <div className="flex-1 space-y-1">
-                      <h3 className="text-base font-bold text-[#1F3A4D] leading-tight">
-                        Personal Coaching to <br /> Breathe your way out
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-bold text-[#222222] leading-tight font-serif">
+                        Personal Coaching to <br /> Breathe your way out.
                       </h3>
-                      <div className="flex items-center gap-4 text-xs text-[#78716C] font-medium">
+
+                      <p className="text-sm text-[#78716C] italic font-serif leading-relaxed line-clamp-2">
+                        "You cannot think your way out of chronic stress."
+                      </p>
+
+                      <div className="flex items-center gap-5 text-xs text-[#57534E] font-medium pt-2 border-t border-[#F2F0EB]">
                         <div className="flex items-center gap-1.5">
                           <Timer className="w-3.5 h-3.5" />
                           <span>10 Weeks</span>
                         </div>
                         <div className="flex items-center gap-1.5">
-                          <span>2500€</span>
+                          <span className="text-[#1F3A4D] font-bold bg-[#F2F0EB] px-2 py-0.5 rounded">900€</span>
+                        </div>
+                        <div className="ml-auto w-6 h-6 rounded-full bg-[#1F3A4D] flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                          <ArrowRight className="w-3 h-3" />
                         </div>
                       </div>
                     </div>
-
-                    <ArrowRight className="w-4 h-4 text-[#A8A29E] group-hover:text-[#1F3A4D] transition-colors" />
                   </div>
                 </Link>
               </div>
+
+
+              {/* 2. Upcoming Retreat Card (SECONDARY) */}
+              <Link href="#events" className="group block max-w-md pl-4">
+                <div className="flex items-center gap-4 p-2 pr-4 rounded-xl hover:bg-[#E7E5E4]/30 transition-all duration-300 border border-transparent hover:border-[#E7E5E4]">
+                  {/* Thumbnail */}
+                  <div className="relative w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-stone-200">
+                    <Image
+                      src="/images/event-egypt.jpg"
+                      alt="Egypt"
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    />
+                  </div>
+
+                  {/* Text */}
+                  <div className="flex-1 min-w-0">
+                    <span className="text-[9px] font-bold tracking-widest text-[#A8A29E] uppercase block mb-0.5">Next Immersion</span>
+                    <h3 className="text-sm font-bold text-[#57534E] leading-tight">Egypt: Ancient Breath</h3>
+                    <div className="flex items-center gap-3 text-[10px] text-[#78716C] mt-1">
+                      <span>Starts Oct 2026</span>
+                      <span className="w-0.5 h-3 bg-[#D6D3D1]" />
+                      <span>1200€</span>
+                    </div>
+                  </div>
+
+                  <ArrowRight className="w-4 h-4 text-[#D6D3D1] group-hover:text-[#57534E] transition-colors" />
+                </div>
+              </Link>
 
             </div>
           </div>
         </div>
 
-        {/* Right Column: Image */}
         {/* Right Column: Image */}
         <div className="flex-1 relative h-[50vh] md:h-auto order-1 md:order-2 mix-blend-normal">
 
