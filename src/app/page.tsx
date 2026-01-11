@@ -59,7 +59,7 @@ export default function Home() {
                 <Link href="mailto:hello@pascal.com?subject=Manager%20Program" className="group block relative">
                   <div className="flex flex-col p-6 rounded-3xl border border-[#E7E5E4] bg-white shadow-lg hover:shadow-xl hover:border-[#1F3A4D]/20 transition-all duration-300 relative overflow-hidden">
 
-                    {/* Integrated Header */}
+                    {/* Integrated Header - Eyebrow */}
                     <div className="flex items-center gap-2 mb-3">
                       <div className="w-8 h-8 rounded-full bg-[#F2F0EB] flex items-center justify-center shrink-0">
                         <BrainCircuit className="w-4 h-4 text-[#1F3A4D]" strokeWidth={1.5} />
@@ -68,18 +68,17 @@ export default function Home() {
                     </div>
 
                     <div className="space-y-3">
-                      {/* Hook Quote */}
-                      <p className="text-sm text-[#78716C] italic font-serif leading-relaxed">
+                      {/* Primary Title Block */}
+                      <div className="font-serif text-[#222222]">
+                        <h3 className="text-2xl font-bold leading-none tracking-tight">Executive 1:1 Coaching</h3>
+                        <p className="text-lg font-medium leading-tight mt-1 text-[#222222]">Master your physiological stress response</p>
+                      </div>
+
+                      {/* Hook Quote - Secondary */}
+                      <p className="font-sans text-sm text-[#78716C] leading-relaxed pt-1">
                         "You cannot think your way out of chronic stress."
                       </p>
 
-                      {/* Primary Title */}
-                      <h3 className="text-xl font-bold text-[#222222] leading-tight font-serif block">
-                        Executive 1:1 Coaching: <br />
-                        <span className="font-normal text-[#57534E]">Master your physiological stress response</span>
-                      </h3>
-
-                      {/* Footer */}
                       {/* Footer */}
                       <div className="flex items-center gap-5 text-xs text-[#57534E] font-medium pt-3 border-t border-[#F2F0EB] mt-1">
                         <div className="flex items-center gap-1.5">
@@ -145,7 +144,7 @@ export default function Home() {
           {/* Mirroring container - using absolute inset to force fill */}
           <div className="absolute inset-0">
             <Image
-              src="/images/hero-bw.jpg"
+              src="/images/hero-transparent.png"
               alt="Pascal with lighter"
               fill
               className="object-cover object-center"
