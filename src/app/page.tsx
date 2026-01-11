@@ -25,50 +25,83 @@ export default function Home() {
       <nav className="absolute top-0 right-0 p-8 z-50">
         <Link
           href="/login"
-          className="text-xs font-medium uppercase tracking-widest text-[#57534E] hover:text-[#1F3A4D] transition-colors flex items-center gap-2"
+          className="text-xs font-bold uppercase tracking-widest text-[#222222] border border-[#E7E5E4] bg-white/50 backdrop-blur-sm px-5 py-2 rounded-full hover:bg-white hover:border-[#D6D3D1] transition-all shadow-sm"
         >
-          Teacher Login
+          Login
         </Link>
       </nav>
 
       {/* --- SECTION 1: HERO (Split Viewport) --- */}
-      <section className="relative h-screen flex flex-col md:flex-row overflow-hidden">
+      <section className="relative min-h-screen flex flex-col md:flex-row overflow-hidden">
 
         {/* Left Column: Content */}
-        <div className="flex-1 flex flex-col justify-center px-8 md:px-24 lg:px-32 z-20 bg-[#F8F7F4] relative order-2 md:order-1 py-12 md:py-0">
-          <div className="space-y-8 max-w-xl relative">
+        <div className="flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24 z-20 bg-[#F8F7F4] relative order-2 md:order-1 py-12 md:py-0">
+          <div className="space-y-10 max-w-xl relative">
 
-            {/* Floating Event Suggestion */}
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500 absolute -top-16 left-0 bg-[#FFFFFF] border border-[#E7E5E4] rounded-full py-2 px-4 shadow-sm flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-[#EDA76B] animate-pulse"></span>
-              <span className="text-xs font-bold text-[#57534E] uppercase tracking-wide">Next: Egypt Immersion</span>
-              <span className="text-xs text-[#A8A29E] font-serif italic">Oct '26</span>
+            {/* Headline */}
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[0.9]">
+                Reclaim your <br />
+                <span className="italic font-serif text-[#78716C]">attention.</span>
+              </h1>
+
+              <h2 className="text-xl font-serif text-[#57534E] font-light leading-relaxed max-w-sm">
+                Analog presence for a digital age.
+              </h2>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[0.9]">
-              Reclaim your <br />
-              <span className="italic font-serif text-[#78716C]">attention.</span>
-            </h1>
+            {/* Action Cards Area */}
+            <div className="flex flex-col gap-5 pt-2">
 
-            <h2 className="text-xl md:text-2xl font-serif text-[#57534E] font-light leading-relaxed max-w-md">
-              Moving from digital overwhelm to analog presence through breathwork and guided retreats.
-            </h2>
+              {/* 1. Upcoming Retreat Card */}
+              <Link href="#events" className="group">
+                <div className="flex items-center gap-5 p-2 pr-6 rounded-2xl md:rounded-full bg-white border border-[#E7E5E4] hover:border-[#EDA76B]/50 hover:shadow-md transition-all duration-300 max-w-md">
+                  {/* Thumbnail */}
+                  <div className="relative w-20 h-20 shrink-0 rounded-xl md:rounded-full overflow-hidden bg-stone-200">
+                    <Image
+                      src="/images/event-egypt.jpg"
+                      alt="Egypt"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
 
-            <div className="pt-4">
-              <Link
-                href="#events"
-                className="inline-flex items-center gap-3 bg-[#1F3A4D] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#292524] transition-all shadow-sm hover:shadow-md hover:scale-[1.02]"
-              >
-                See Upcoming Retreats
-                <ArrowRight className="w-5 h-5" />
+                  {/* Text */}
+                  <div className="flex-1 min-w-0">
+                    <span className="text-[10px] font-bold tracking-widest text-[#EDA76B] uppercase block mb-0.5">Upcoming Retreat</span>
+                    <h3 className="text-lg font-serif font-medium text-[#222222] truncate">Egypt Immersion</h3>
+                    <div className="flex items-center gap-3 text-xs text-[#78716C] mt-0.5">
+                      <span>Oct '26</span>
+                      <span className="w-1 h-1 rounded-full bg-[#D6D3D1]" />
+                      <span>Cairo</span>
+                    </div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="w-8 h-8 rounded-full bg-[#F8F7F4] flex items-center justify-center text-[#222222] group-hover:bg-[#1F3A4D] group-hover:text-white transition-colors">
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </div>
               </Link>
+
+              {/* 2. Coaching Card */}
+              <Link href="mailto:hello@pascal.com?subject=Coaching%20Inquiry" className="group block max-w-md">
+                <div className="flex items-center justify-between p-5 rounded-2xl border border-[#E7E5E4] bg-[#F2F0EB]/50 hover:bg-[#F2F0EB] transition-colors">
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-bold tracking-widest text-[#1F3A4D] uppercase block">I work with you personally</span>
+                    <h3 className="text-lg font-serif font-medium text-[#57534E]">Personal 10 Week Coaching</h3>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-[#A8A29E] group-hover:text-[#1F3A4D] transition-colors" />
+                </div>
+              </Link>
+
             </div>
           </div>
         </div>
 
         {/* Right Column: Image */}
         <div className="flex-1 relative h-[50vh] md:h-full order-1 md:order-2">
-          {/* Mirroring container to flip Pascal to the right side if needed, or just flipping the image */}
+          {/* Mirroring container */}
           <div className="relative w-full h-full scale-x-[-1]">
             <Image
               src="/images/hero-pascal.jpg"
@@ -79,7 +112,7 @@ export default function Home() {
             />
           </div>
 
-          {/* Gradient Transition Overlay - Left Edge (which is right edge after mirror? No, overlay should be unmirrored) */}
+          {/* Gradient Transition Overlay */}
           <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#F8F7F4] via-[#F8F7F4]/80 to-transparent z-10 pointer-events-none" />
 
           {/* Darker atmosphere overlay */}
@@ -137,7 +170,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
 
           {/* Left: Image */}
-          <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 hidden md:block">
             <Image
               src="/images/session-bw.jpg"
               alt="Pascal teaching a group session"
@@ -159,6 +192,15 @@ export default function Home() {
             <p className="text-lg text-[#57534E] font-serif leading-loose">
               This is deep, restorative work for a distracted age.
             </p>
+            {/* Mobile only image */}
+            <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl grayscale md:hidden mt-8">
+              <Image
+                src="/images/session-bw.jpg"
+                alt="Pascal teaching a group session"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
         </div>
