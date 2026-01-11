@@ -48,8 +48,8 @@ export default function Home() {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[0.9]">
-                Reclaim your <br />
-                executive <span className="italic font-serif text-[#78716C]">attention.</span>
+                Press Delete <br />
+                on the <span className="italic font-serif text-[#78716C]">Noise.</span>
               </h1>
 
               <h2 className="text-xl font-serif text-[#57534E] font-light leading-relaxed max-w-2xl">
