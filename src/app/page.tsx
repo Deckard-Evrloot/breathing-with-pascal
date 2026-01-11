@@ -60,26 +60,27 @@ export default function Home() {
                   <div className="flex flex-col p-6 rounded-3xl border border-[#E7E5E4] bg-white shadow-lg hover:shadow-xl hover:border-[#1F3A4D]/20 transition-all duration-300 relative overflow-hidden">
 
                     {/* Integrated Header */}
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-[#F2F0EB] flex items-center justify-center shrink-0">
-                          <BrainCircuit className="w-4 h-4 text-[#1F3A4D]" strokeWidth={1.5} />
-                        </div>
-                        <span className="text-[10px] font-bold tracking-widest text-[#1F3A4D] uppercase">New 2026: Manager Program</span>
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-8 h-8 rounded-full bg-[#F2F0EB] flex items-center justify-center shrink-0">
+                        <BrainCircuit className="w-4 h-4 text-[#1F3A4D]" strokeWidth={1.5} />
                       </div>
-                      {/* <Sparkles className="w-4 h-4 text-[#EDA76B]" /> */}
+                      <span className="text-[10px] font-bold tracking-widest text-[#1F3A4D] uppercase">New 2026: Manager Program</span>
                     </div>
 
                     <div className="space-y-3">
-                      <h3 className="text-xl font-bold text-[#222222] leading-tight font-serif">
-                        Personal Coaching to <br /> Breathe your way out.
-                      </h3>
-
-                      <p className="text-sm text-[#78716C] italic font-serif leading-relaxed line-clamp-2">
+                      {/* Hook Quote */}
+                      <p className="text-sm text-[#78716C] italic font-serif leading-relaxed">
                         "You cannot think your way out of chronic stress."
                       </p>
 
-                      <div className="flex items-center gap-5 text-xs text-[#57534E] font-medium pt-2 border-t border-[#F2F0EB]">
+                      {/* Primary Title */}
+                      <h3 className="text-xl font-bold text-[#222222] leading-tight font-serif block">
+                        Executive 1:1 Coaching: <br />
+                        <span className="font-normal text-[#57534E]">Master your physiological stress response</span>
+                      </h3>
+
+                      {/* Footer */}
+                      <div className="flex items-center gap-5 text-xs text-[#57534E] font-medium pt-3 border-t border-[#F2F0EB] mt-1">
                         <div className="flex items-center gap-1.5">
                           <Timer className="w-3.5 h-3.5" />
                           <span>10 Weeks</span>
@@ -112,12 +113,16 @@ export default function Home() {
 
                   {/* Text */}
                   <div className="flex-1 min-w-0">
-                    <span className="text-[9px] font-bold tracking-widest text-[#A8A29E] uppercase block mb-0.5">Next Immersion</span>
+                    <span className="text-[9px] font-bold tracking-widest text-[#A8A29E] uppercase block mb-0.5">Upcoming Event</span>
                     <h3 className="text-sm font-bold text-[#57534E] leading-tight">Egypt: Ancient Breath</h3>
-                    <div className="flex items-center gap-3 text-[10px] text-[#78716C] mt-1">
-                      <span>Starts Oct 2026</span>
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-[#78716C] mt-1">
+                      <span>Oct. 2026</span>
                       <span className="w-0.5 h-3 bg-[#D6D3D1]" />
-                      <span>1200€</span>
+                      <span>8 Days</span>
+                      <span className="w-0.5 h-3 bg-[#D6D3D1]" />
+                      <span>Dahab, Egypt</span>
+                      <span className="w-0.5 h-3 bg-[#D6D3D1]" />
+                      <span className="text-[#1F3A4D] font-bold bg-[#F2F0EB] px-1.5 py-0.5 rounded">1200€</span>
                     </div>
                   </div>
 
