@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calendar, MapPin, Instagram, Mail, Lock } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Instagram, Mail, Lock, BrainCircuit, Timer, Euro, Gem } from "lucide-react";
 import { Inter, Lora } from "next/font/google";
 
 // Scoped Fonts
@@ -51,13 +51,13 @@ export default function Home() {
             </div>
 
             {/* Action Cards Area */}
-            <div className="flex flex-col gap-5 pt-2">
+            <div className="flex flex-col gap-6 pt-4">
 
               {/* 1. Upcoming Retreat Card */}
-              <Link href="#events" className="group">
-                <div className="flex items-center gap-5 p-2 pr-6 rounded-2xl md:rounded-full bg-white border border-[#E7E5E4] hover:border-[#EDA76B]/50 hover:shadow-md transition-all duration-300 max-w-md">
+              <Link href="#events" className="group block max-w-md relative">
+                <div className="flex items-center gap-5 p-3 pr-6 rounded-2xl bg-white border border-[#E7E5E4] hover:border-[#EDA76B]/50 hover:shadow-md transition-all duration-300">
                   {/* Thumbnail */}
-                  <div className="relative w-20 h-20 shrink-0 rounded-xl md:rounded-full overflow-hidden bg-stone-200">
+                  <div className="relative w-24 h-24 shrink-0 rounded-xl overflow-hidden bg-stone-200">
                     <Image
                       src="/images/event-egypt.jpg"
                       alt="Egypt"
@@ -67,13 +67,19 @@ export default function Home() {
                   </div>
 
                   {/* Text */}
-                  <div className="flex-1 min-w-0">
-                    <span className="text-[10px] font-bold tracking-widest text-[#EDA76B] uppercase block mb-0.5">Upcoming Retreat</span>
-                    <h3 className="text-lg font-serif font-medium text-[#222222] truncate">Egypt Immersion</h3>
-                    <div className="flex items-center gap-3 text-xs text-[#78716C] mt-0.5">
-                      <span>Oct '26</span>
-                      <span className="w-1 h-1 rounded-full bg-[#D6D3D1]" />
-                      <span>Cairo</span>
+                  <div className="flex-1 min-w-0 space-y-1">
+                    <span className="text-[10px] font-bold tracking-widest text-[#EDA76B] uppercase block">Upcoming Retreat</span>
+                    <h3 className="text-lg font-serif font-medium text-[#222222] leading-tight">Egypt Immersion</h3>
+
+                    {/* Meta Info */}
+                    <div className="flex items-center gap-4 text-xs text-[#78716C] pt-1 font-medium">
+                      <div className="flex items-center gap-1.5">
+                        <Timer className="w-3.5 h-3.5" />
+                        <span>1 Week</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <span>1200€</span>
+                      </div>
                     </div>
                   </div>
 
@@ -85,24 +91,54 @@ export default function Home() {
               </Link>
 
               {/* 2. Coaching Card */}
-              <Link href="mailto:hello@pascal.com?subject=Coaching%20Inquiry" className="group block max-w-md">
-                <div className="flex items-center justify-between p-5 rounded-2xl border border-[#E7E5E4] bg-[#F2F0EB]/50 hover:bg-[#F2F0EB] transition-colors">
-                  <div className="space-y-1">
-                    <span className="text-[10px] font-bold tracking-widest text-[#1F3A4D] uppercase block">I work with you personally</span>
-                    <h3 className="text-lg font-serif font-medium text-[#57534E]">Personal 10 Week Coaching</h3>
+              <div className="max-w-md space-y-3">
+                <p className="text-sm font-serif text-[#78716C] italic pl-2">
+                  "You cannot think your way out of chronic stress."
+                </p>
+
+                <Link href="mailto:hello@pascal.com?subject=Manager%20Program" className="group block relative">
+                  {/* Badge */}
+                  <div className="absolute -top-3 -right-2 bg-[#1F3A4D] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-sm z-10 transform rotate-2">
+                    NEW 2026: Manager Program
                   </div>
-                  <ArrowRight className="w-4 h-4 text-[#A8A29E] group-hover:text-[#1F3A4D] transition-colors" />
-                </div>
-              </Link>
+
+                  <div className="flex items-center gap-5 p-4 rounded-2xl border border-[#E7E5E4] bg-[#F2F0EB]/50 hover:bg-[#F2F0EB] transition-colors relative overflow-hidden">
+
+                    {/* Line Art Icon */}
+                    <div className="w-12 h-12 rounded-full bg-[#E7E5E4]/50 flex items-center justify-center shrink-0">
+                      <BrainCircuit className="w-6 h-6 text-[#57534E]" strokeWidth={1.5} />
+                    </div>
+
+                    <div className="flex-1 space-y-1">
+                      <h3 className="text-base font-bold text-[#1F3A4D] leading-tight">
+                        Personal Coaching to <br /> Breathe your way out
+                      </h3>
+                      <div className="flex items-center gap-4 text-xs text-[#78716C] font-medium">
+                        <div className="flex items-center gap-1.5">
+                          <Timer className="w-3.5 h-3.5" />
+                          <span>10 Weeks</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <span>2500€</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ArrowRight className="w-4 h-4 text-[#A8A29E] group-hover:text-[#1F3A4D] transition-colors" />
+                  </div>
+                </Link>
+              </div>
 
             </div>
           </div>
         </div>
 
         {/* Right Column: Image */}
-        <div className="flex-1 relative h-[50vh] md:h-full order-1 md:order-2">
-          {/* Mirroring container */}
-          <div className="relative w-full h-full scale-x-[-1]">
+        {/* Right Column: Image */}
+        <div className="flex-1 relative h-[50vh] md:h-auto order-1 md:order-2 mix-blend-normal">
+
+          {/* Mirroring container - using absolute inset to force fill */}
+          <div className="absolute inset-0 scale-x-[-1]">
             <Image
               src="/images/hero-pascal.jpg"
               alt="Pascal with lighter"
@@ -250,6 +286,15 @@ export default function Home() {
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-[#EDA76B]" />
                   <span>Cairo, Egypt</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Timer className="w-4 h-4 text-[#EDA76B]" />
+                  <span>1 Week</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Euro className="w-4 h-4 text-[#EDA76B]" />
+                  <span>1200€</span>
                 </div>
               </div>
 
